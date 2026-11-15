@@ -305,7 +305,7 @@
 
 
       if(document.getElementById("section-portfolio")){
-            var $grid = $(".grid").isotope({
+            var $grid = $(".grid:not(.project-grid)").isotope({
               itemSelector: ".all",
               percentPosition: true,
               masonry: {

@@ -623,3 +623,38 @@ a {
 .letter-spacing {
   letter-spacing: .2rem;
   color: rgba(255, 255, 255, 0.5) !important; }
+
+/* Keep project cards aligned in rows, independently of the image masonry. */
+#section-portfolio .project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+#section-portfolio .project-grid > .single-portfolio {
+  width: auto;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+#section-portfolio .project-grid .resume-item {
+  height: 100%;
+  margin-bottom: 0 !important;
+}
+@media (max-width: 991.98px) {
+  #section-portfolio .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 575.98px) {
+  #section-portfolio .project-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.achievement-list {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+.achievement-list li + li {
+  margin-top: 0.65rem;
+}
